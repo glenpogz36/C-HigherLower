@@ -16,8 +16,8 @@ using System.Collections.Generic;
       string stringNumberEntered = Console.ReadLine();
       int numberEntered = int.Parse(stringNumberEntered); 
       answer = "";
-      int guess = 50;
-      int count = 2;
+      double guess = 50;
+      double count = 2;
       
       while (answer != "Correct" && answer != "No" && answer !="Yes")
       { 
@@ -25,11 +25,11 @@ using System.Collections.Generic;
       answer = Console.ReadLine();
       if (answer == "Higher")
       {
-      guess=guess+50/count;
+      guess=Convert.ToInt32(guess+50/count);
       }
       else if (answer == "Lower")
       {
-      guess=guess-50/count;
+      guess=Convert.ToInt32(guess-50/count);
       }
       else 
       {
